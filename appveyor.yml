@@ -1,0 +1,15 @@
+version: 1.0.{build}
+image:
+- Ubuntu
+
+environment:
+  matrix:
+    - ARCH: arm
+    - ARCH: arm64
+    - ARCH: amd64
+
+build_script:
+  - ps: ./build.ps1
+
+deploy_script:
+  - ps: ./deploy.ps1
